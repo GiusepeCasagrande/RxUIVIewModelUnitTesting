@@ -1,2 +1,2 @@
 # RxUIVIewModelUnitTesting
-Sample used for a SO questin\on
+Sample used for a SO question
