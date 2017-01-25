@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:ContentPageBase x:Class="RxUIVIewModelUnitTesting.Views.SomeView"
+                       xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="clr-namespace:RxUIVIewModelUnitTesting.Views;assembly=RxUIVIewModelUnitTesting"
+                       xmlns:vms="clr-namespace:RxUIVIewModelUnitTesting.ViewModels"
+                       Title="Login"
+                       x:TypeArguments="vms:SomeViewModel">
+    <ContentPage.Content BackgroundColor="{DynamicResource defaultBackgroundColor}">
+        <ScrollView BackgroundColor="{DynamicResource defaultBackgroundColor}">
+            <StackLayout Orientation="Vertical" Padding="40">
+                <Label HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Text="Some Text" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</views:ContentPageBase>

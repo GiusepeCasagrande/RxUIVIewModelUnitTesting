@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:ContentPageBase x:Class="RxUIVIewModelUnitTesting.Views.LoginView"
+                       xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="clr-namespace:RxUIVIewModelUnitTesting.Views;assembly=RxUIVIewModelUnitTesting"
+                       xmlns:vms="clr-namespace:RxUIVIewModelUnitTesting.ViewModels"
+                       Title="Login"
+                       x:TypeArguments="vms:LoginViewModel">
+    <ContentPage.Content BackgroundColor="{DynamicResource defaultBackgroundColor}">
+        <ScrollView BackgroundColor="{DynamicResource defaultBackgroundColor}">
+            <StackLayout Orientation="Vertical" Padding="40">
+                <Grid VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+                    <Entry x:Name="UserName"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           VerticalOptions="End"
+                           AutomationId="LoginView_UserName"
+                           Keyboard="Email"
+                           Placeholder="Username"
+                           Style="{DynamicResource regularEntry}" />
+                    <Entry x:Name="Password"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           VerticalOptions="End"
+                           AutomationId="LoginView_Password"
+                           IsPassword="true"
+                           Placeholder="Password"
+                           Style="{DynamicResource regularEntry}" />
+                </Grid>
+                <Grid VerticalOptions="EndAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".20*" />
+                        <ColumnDefinition Width=".6*" />
+                        <ColumnDefinition Width=".20*" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="Login"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            AutomationId="LoginView_SignIn"
+                            Style="{DynamicResource blueButton}"
+                            Text="SignIn" />
+                    <Button x:Name="Help"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            AutomationId="LoginView_Help"
+                            Style="{DynamicResource whiteButton}"
+                            Text="SignIn Help"
+                            TextColor="{DynamicResource titleTextColor}" />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</views:ContentPageBase>
